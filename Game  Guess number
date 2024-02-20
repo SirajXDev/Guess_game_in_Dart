@@ -1,0 +1,21 @@
+import 'dart:io';
+import 'dart:math';
+
+void main(){
+print('Enter a number');
+int inputnumber=int.parse(stdin.readLineSync()!);
+int guessNo=Random().nextInt(50);
+while(true){
+if(inputnumber==guessNo){
+    print('you win the game');
+    break;
+} else if(inputnumber > guessNo){
+print('please enter smaler no');
+ inputnumber =int.parse(stdin.readLineSync()!);
+} 
+else{
+print('please enter greater no');
+ inputnumber=int.parse(stdin.readLineSync()!);
+};
+}
+}
